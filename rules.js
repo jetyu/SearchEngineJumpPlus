@@ -38,23 +38,23 @@ const webRules = [
     style: `
       z-index: 100;
       margin-top:15px;
-      margin-bottom:5px;
+      margin-left:-10px;
       position:sticky;
       top: 57px;
     `,
     style_ACBaidu: `
       text-align: center;
       z-index: 100;
-      margin-top:5px;
+      margin-top:-5px;
       margin: auto;
     `,
     insertIntoDoc: {
-      target: "css;#appbar",
+      target: "css;.ufC5Cb",
       keyword: "css;[name=q]",
-      where: "beforeBegin",
+      where: "afterBegin",
     },
     stylish:
-      "#appbar.hdtb-ab-o{height:0px !important;} #hdtbMenus{position:unset}",
+      ".ufC5Cb.hdtb-ab-o{height:0px !important;} #hdtbMenus{position:unset}",
   },
   {
     name: "google-hash-query", // 不刷新页面显示搜索结果的google
@@ -72,7 +72,7 @@ const webRules = [
       margin:5px auto 0;
     `,
     insertIntoDoc: {
-      target: "css;#appbar",
+      target: "css;.ufC5Cb",
       keyword: function () {
         var input = document.getElementById("lst-ib");
         if (input) return input.value;
